@@ -1,0 +1,74 @@
+body {
+    /*
+    a. Cor de fundo: #ddd;
+b. Fonte: "Helvetica Neue";
+c. Espaçamento entre linhas: 1,5;
+d. O conteúdo deve ocupar 60% da largura;
+e. O conteúdo deve ser centralizado horizontalmente;
+f. Paddings apropriados;
+    */
+}
+
+header,
+footer,
+nav {
+    /*
+    a. Cor de fundo: #555;
+b. Cor da fonte: #eee;
+c. Borda curva na cor cinza com raio de 10 pixels;
+d. Conteúdo (texto) centralizado;
+e. Margem superior de 5px e demais zeradas;
+f. Paddings apropriados;
+    */
+}
+
+nav ul {
+    /*
+    Os itens do menu na barra de navegação são itens de lista não ordenada, porém seus estilos
+de exibição foram alterados com CSS. Veja as dicas na videoaula;
+    */
+}
+
+nav ul li {
+/*
+Os itens do menu na barra de navegação são itens de lista não ordenada, porém seus estilos
+de exibição foram alterados com CSS. Veja as dicas na videoaula;
+*/
+}
+
+nav a {
+    /*
+    Os links do menu de navegação devem aparecer como na figura modelo, sem o caractere
+underline, na cor #ddd por padrão e na cor #fff quando o usuário estiver com o ponteiro do
+mouse sobre o mesmo;
+
+    */
+}
+
+nav a:link,
+nav a:visited {
+
+}
+
+nav a:hover {}
+
+main {
+    /*
+    a. Fundo branco;
+b. Margens e paddings apropriados;
+c. Borda curva na cor cinza claro com raio de 10 pixels;
+    */
+}
+
+h2 {
+    /*
+    7. Os títulos <h2> devem aparecer na cor #555;
+    */
+}
+
+.galery img {
+    /*
+    Observe os detalhes das imagens. Repare os cantos arredondados, o espaçamento e o
+sombreamento;
+    */
+}
