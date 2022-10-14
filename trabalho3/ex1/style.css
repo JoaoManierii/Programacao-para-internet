@@ -3,10 +3,10 @@ body {
     background-color: #ddd;
     color: #444;
     font-family: "Helvetica Neue";
-    line-height: 1, 5;
+    line-height: 1.5;
     max-width: 60%;
-    padding: auto;
     margin: auto;
+    padding: 1%;
 }
 
 main {
