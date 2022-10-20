@@ -2,7 +2,7 @@ body {
 
 
     background-color: #ddd;
-    font-family: "Helvetica Neue";
+    font-family:  Helvetica, sans-serif;
     line-height: 1.5;
     max-width: 60%;
     margin: auto;
@@ -56,7 +56,10 @@ nav a:hover {
 }
 
 main {
-   background-color: #ddd;
+   background-color: white;
+   border-radius: 10px;
+   margin-top: 5px;
+   padding: 5px;
 }
 
 h2 {
@@ -64,5 +67,7 @@ h2 {
 }
 
 .galery img {
-   border-radius: 10px;
+   border-radius: 9px;
+   box-shadow: 4px 4px;
+   margin: 10px;
 }
