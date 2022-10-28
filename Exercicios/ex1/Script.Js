@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function alteraConteudo(e) {
         e.target.texContent = "Obrigado";
     }
+
+    function showMessage() {
+        
+    }
