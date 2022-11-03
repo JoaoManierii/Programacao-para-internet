@@ -1,0 +1,39 @@
+body {
+
+    background-color: #ddd;
+    color: #444;
+    font-family: "Helvetica Neue";
+    line-height: 1.5;
+    max-width: 60%;
+    margin: auto;
+    padding: 1%;
+}
+
+main {
+
+    background-color: white;
+    padding: 3%;
+    margin: 3%;
+    border-radius: 10px;
+    
+}
+
+section {
+
+    border-color: gray;
+    margin-bottom: 2%;
+}
+
+/*
+ Cada seção do currículo deve ter uma borda superior na corda cinza, conforme apresentado
+na Figura 1. Tal borda não deve ficar muito distante do título da seção. O espaçamento pode
+ser ajustado diminuindo a margem superior dos títulos <h2>;
+ */
+
+h1,
+h2 {
+
+    color: rgb(140, 76, 8);
+    margin-top: 20px;
+    user-select: none;
+}
