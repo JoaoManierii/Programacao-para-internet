@@ -7,10 +7,12 @@ window.onload = function () { //o evento load ocorre qdo a página inteira e car
 }
 
 function openTab(tabName) { // define o codigo da funcao tabName
+    const lastBtnActive = document.querySelector(".buttonActive"); // seleciona a classe "tabActive" definido no html e atribui uma variavel (LastTabActive) buscando no documento 
     const lastTabActive = document.querySelector(".tabActive"); // seleciona a classe "tabActive" definido no html e atribui uma variavel (LastTabActive) buscando no documento 
-    if (lastTabActive !== null) // se a ultima tabela ativa for diferente de nula o if executa a instrucao abaixo
-    lastTabActive.className = " "; //deixa valido para quando o proximo click for executado o codigo acima ocorra
-
+    if (lastTabActive !== null || lastBtnActive !== null) { // se a ultima tabela ativa for diferente de nula o if executa a instrucao abaixo
+        lastTabActive.className = " "; //deixa valido para quando o proximo click for executado o codigo acima ocorra
+        lastBtnActive.className = " "; //deixa valido para quando o proximo click for executado o codigo acima ocorra
+    }
     const query1 = ".tabs > section[data-tabname = '" + tabName + "']"; // seleciona o elemento section que tem o atributo personalizado com o atributo igual ao que foi passado como argumento
     const query2 = "nav button[data-tabname='" + tabName + "']"; // seleciona o elemento button que tem o atributo personalizado com o atributo igual ao que foi passado como argumento
 

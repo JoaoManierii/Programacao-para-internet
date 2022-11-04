@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav button {
     border: none;
     outline: none;
@@ -24,4 +30,50 @@ button.buttonActive {
 
 section.tabActive {
     display: block;
+}
+
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    background-color: #333;
+    color: whitesmoke;
+    height: 60px;
+    text-align: center;
+    vertical-align: baseline;
+    line-height: 55px;
+}
+
+nav {
+    text-align: center;
+    border: 2px solid gray;
+    background-color: whitesmoke;
+}
+
+nav ul > li {
+    display: inline-block;
+}
+
+.tabs {
+    width: 600px;
+    background-color: whitesmoke;
+    margin: 5px auto;
+    padding: 30px;
+    border: 2px solid gray;
+    border-radius: 2px;
+}
+
+.tabs section h2 {
+    color: blue;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.tabs section p {
+    line-height: 22px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
