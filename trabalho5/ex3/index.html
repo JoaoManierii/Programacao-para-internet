@@ -18,23 +18,14 @@
       margin-bottom: 10px;
       border: 1px solid lightgrey;
     }
-    .col article {
-      background-color: #fdd;
-    }
-    .col-sm article {
-      background-color: #dfd;
-    }
-    .col-md article {
-      background-color: #ddf;
-    }
-    .col-2 article {
-      background-color: #ddf;
-    }
-    #a1 article {
+    #a article {
         background-color: #fdd;
 
     }
-    #c7 article {
+    #b article {
+      background-color: #dfd;
+    }
+    #c article {
         background-color: #ddf;
     }
   </style>
@@ -42,45 +33,45 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-4" id="a1">
+      <div class="col-md-4 " id="a">
         <article> A1 </article>
       </div>
-      <div class="col">
+      <div class="col" id="a">
         <article> A2 </article>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm col-5" id="b">
         <article> B1 </article>
       </div>
-      <div class="col-sm">
+      <div class="col-sm col-5" id="b">
         <article> B2 </article>
       </div>
-      <div class="col-sm">
+      <div class="col-sm col-2" id="b">
         <article> B3 </article>
       </div>
     </div>
     <div class="row">
-      <div class="col-2">
+      <div class="col-sm-2" id="c">
         <article> C1 </article>
       </div>
-      <div class="col-2">
+      <div class="col-sm-2" id="c">
         <article> C2 </article>
       </div>
-      <div class="col-md">
+      <div class="col-md" id="c">
         <article> C3 </article>
       </div>
-      <div class="col-md">
+      <div class="col-md" id="c">
         <article> C4 </article>
       </div>
-      <div class="col-md">
+      <div class="col-md" id="c">
         <article> C5 </article>
       </div>
-      <div class="col-md">
+      <div class="col-md" id="c">
         <article> C6 </article>
       </div>
-      <div class="col-4" id="c7">
+      <div class="col-sm-4" id="c">
         <article> C7 </article>
       </div>
     </div>
