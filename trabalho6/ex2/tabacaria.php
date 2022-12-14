@@ -2,16 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ex1</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ex1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
-
 <body>
-  <main>
-    <?php
+    <main>
+        <?php
     $produtos = array("Vape","Pod","Mod","Tabaco","Juriti","Caximbo","Malboro","Seda","Palheiro","Charuto");
 
     $descricao = array(
@@ -35,17 +34,26 @@
             $tp = $produtos[$num];
 
             echo <<<HTML
-                <table class="table table-striped table-dark">
-                    <div class="row" >
-                        <div class="col-2">$i</div>
-                        <div class="col">$tp</div>
-                        <div class="col">$descricao[$tp]</div>
-                    </div>
+            <table class="table table-striped table-dark">
+                <thead>
+                <tr>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descricao</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>$i</td>
+                <td>$tp</td>
+                <td>$descricao[$tp]</td>
+                </tr>
+                </tbody>
                 </table>
             HTML;
         }
             ?>
-  </main>
+    </main>
 </body>
 
 </html>
