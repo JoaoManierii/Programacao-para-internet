@@ -28,7 +28,8 @@
 
       <tbody>
         <?php
-    require "email.php";
+    require "contatos.php";
+    require "senha.php";
     $arrayContatos = carregaContatosDeArquivo();	
     if ($arrayContatos != NULL)
     {

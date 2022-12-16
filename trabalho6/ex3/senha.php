@@ -1,13 +1,13 @@
 <?php
 
-class Contato
+class Senha
 {
+  public $senha;
 
-  public $email;
-  function __construct($email)
+  function __construct($senha)
   {
 
-    $this->email = $email;
+    $this->senha = password_hash($senha, PASSWORD_DEFAULT);
 ;
   }
 
@@ -15,17 +15,25 @@ class Contato
   {
     // abre o arquivo para escrita de conteúdo no final
     $arq = fopen($arquivo, "a");
-    fwrite($arq, "\n{$this->email}");
+    fwrite($arq, "\n{$this->senha}");
     fclose($arq);
   }
 }
 
+function salvaString($string, $arquivo)
+{
+ $arq = fopen($arquivo, "senha.txt");
+ fwrite($arq, $string);
+ fclose($arq);
+}
+
+
 function carregaContatosDeArquivo()
 {
-  $arrayContatos = null;
+  $arraySenha = null;
 
   // Abre o arquivo email.txt para leitura
-  $arq = fopen("email.txt", "r");
+  $arq = fopen("senhaHash.txt", "r");
   if (!$arq)
     return null;
 
@@ -35,16 +43,16 @@ function carregaContatosDeArquivo()
     $contato = fgets($arq);
 
     // Separa dados na linha utilizando o ';' como separador
-    list($email) = array_pad(explode(';', $contato), 1, null);
+    list($senha) = array_pad(explode(';', $contato), 1, null);
 
     // Cria novo objeto representado o contato e adiciona no final do array
-    $novoContato = new Contato($email);
-    $arrayContatos[] = $novoContato;
+    $novaSenha = new Senha($senha);
+    $arraySenha[] = $novaSenha;
   }
 
   // Fecha o arquivo
   fclose($arq);
-  return $arrayContatos;
+  return $arraySenha;
 }
 
 ?>
