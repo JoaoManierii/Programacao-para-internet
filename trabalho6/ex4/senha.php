@@ -10,12 +10,14 @@ class Senha
     ;
   }
 
-  function salvaString($string, $arquivo)
-  {
-    $arq = fopen($arquivo, "senhaHash.txt");
-    fwrite($arq, $string);
-    fclose($arq);
-  }
+  function carregaString($arquivo)
+{
+ $arq = fopen($arquivo, "senhaHash.txt");
+ $string = fgets($arq);
+ fclose($arq);
+ return $string;
+}
+
 }
 function carregaContatosDeArquivo()
 {

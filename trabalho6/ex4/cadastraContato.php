@@ -13,7 +13,7 @@ $novoContato->AddToFile("email.txt");
 require "senha.php";
 
 $novaSenha = new Senha($senha);
-$novaSenha-> salvaString("senhaHash.txt");
+$novaSenha-> carregaString("senhaHash.txt");
 
 
 // redireciona o navegador para a página de listagem de contatos
