@@ -6,28 +6,17 @@ class Senha
 
   function __construct($senha)
   {
-
     $this->senha = password_hash($senha, PASSWORD_DEFAULT);
 ;
   }
 
-  public function AddToFile($arquivo)
+  function salvaString($string, $arquivo)
   {
-    // abre o arquivo para escrita de conteúdo no final
-    $arq = fopen($arquivo, "a");
-    fwrite($arq, "\n{$this->senha}");
-    fclose($arq);
+   $arq = fopen($arquivo, "senhaHash.txt");
+   fwrite($arq, $string);
+   fclose($arq);
   }
 }
-
-function salvaString($string, $arquivo)
-{
- $arq = fopen($arquivo, "senha.txt");
- fwrite($arq, $string);
- fclose($arq);
-}
-
-
 function carregaContatosDeArquivo()
 {
   $arraySenha = null;

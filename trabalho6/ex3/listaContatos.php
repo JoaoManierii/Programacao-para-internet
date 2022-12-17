@@ -22,26 +22,21 @@
       <thead>
         <tr>
           <th>E-mail</th>
-          <th>Senha</th>
         </tr>
       </thead>
 
       <tbody>
         <?php
     require "contatos.php";
-    require "senha.php";
     $arrayContatos = carregaContatosDeArquivo();	
     if ($arrayContatos != NULL)
     {
       foreach ($arrayContatos as $contato)
       {    
         $email = htmlspecialchars($contato->email);
-        $senha = htmlspecialchars($contato->senha);
-
         echo <<<HTML
         <tr>
           <td>$email</td>
-          <td>$senha</td>
         </tr>
         HTML;
       }
