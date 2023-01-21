@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<title>Questao3</title>
+	</head>
+<body>
+	<form>
+		<div>
+            <label for="salario">Salário </label>
+            <input type="text" salario="salario" name="func_salario">
+          </div>
+		<div>
+			<button>Enviar</button>
+		</div>
+	</form>
+	<script>
+
+		function buscaSalario(salario) {
+
+			let form = document.querySelector("form");
+
+			fetch("questao2.php?salMin=" + salario)
+			.then(response => {
+				if (!response.ok) {
+					throw new Error(response.status);
+				}
+					return response.json();
+			})
+			.then(sal => {
+				form.salario.salMin = sal.salario;
+				f
+			})
+			.catch(error => {
+				form.reset();
+				console.error('Falha inesperada: ' + error);
+			});
+		}
+
+		window.onload = function () {
+			const inputsalario = document.querySelector("#salario_sal");
+			inputsalario.onkeyup = () => buscaSalario(inputsalario.salMin);
+		}
+	</script>
+</body>
+</html>
