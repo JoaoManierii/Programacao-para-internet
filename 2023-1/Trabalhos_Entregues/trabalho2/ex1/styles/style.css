@@ -1,0 +1,37 @@
+body {
+
+    background-color: #ddd;
+    color: #444;
+    font-family: "Helvetica Neue";
+    line-height: 1.5;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2% 0;
+    width: 60%;
+}
+
+header, main, nav {
+
+    background-color: white;
+    padding: 3%;
+    margin: 3%;
+    border-radius: 10px;
+    
+}
+
+section {
+
+    border-color: gray;
+    margin-bottom: 2%;
+}
+
+h1, h2 {
+
+    color: rgb(140, 76, 8);
+    margin-top: 20px;
+}
+
+img {
+    max-width: 450px;
+}
+

@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+main {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul #login {
+    margin-left: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    padding-right: 40px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.288);
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: black;
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+        position: fixed; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    nav ul #login {
+        margin-left: 0; 
+    }
+
+    .lista {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+
+    .lista li img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .lista {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .lista li img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}
