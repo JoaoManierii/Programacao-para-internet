@@ -1,31 +1,32 @@
 const form = document.getElementById('loginForm');
+const alertDiv = document.createElement('div');
 
 form.addEventListener('submit', function (event) {
     const emailInput = document.getElementById('email');
     const senhaInput = document.getElementById('senha');
    
-    let valido = true;
-
     if (emailInput.value.trim() === '') {
-        emailInput.classList.add('is-invalid');
-        valido = false;
-    } else {
-        emailInput.classList.remove('is-invalid');
-    }
+        event.preventDefault();
+        alertDiv.className = 'alert alert-danger mt-3';
+        alertDiv.textContent = 'Falta o email ai parceria';
+        form.appendChild(alertDiv);
+    } 
 
     if (senhaInput.value.trim() === '') {
-        senhaInput.classList.add('is-invalid');
-        valido = false;
-    } else {
-        senhaInput.classList.remove('is-invalid');
+        event.preventDefault();
+        alertDiv.className = 'alert alert-danger mt-3';
+        alertDiv.textContent = 'Falta a senha ai jao';
+        form.appendChild(alertDiv);
+
     }
 
-    if (!valido) {
+    if (senhaInput.value.trim() === '' && emailInput.value.trim() === '') {
         event.preventDefault();
-        const alertDiv = document.createElement('div');
         alertDiv.className = 'alert alert-danger mt-3';
-        alertDiv.textContent = 'Preencha os campos corretamente';
+        alertDiv.textContent = 'Preenche tudo ai, ta faltando coisa';
         form.appendChild(alertDiv);
-    }
+
+    } 
+
 });
 
