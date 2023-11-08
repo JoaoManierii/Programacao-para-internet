@@ -11,9 +11,6 @@ try {
   FROM usuarios 
   SQL;
 
-    // Neste exemplo não é necessário utilizar prepared statements
-    // porque não há possibilidade de injeção de SQL, 
-    // pois nenhum parâmetro é utilizado na query SQL
     $stmt = $pdo->query($sql);
 } catch (Exception $e) {
     //error_log($e->getMessage(), 3, 'log.php');
@@ -62,8 +59,6 @@ try {
             <?php
             while ($row = $stmt->fetch()) {
 
-                // Limpa os dados produzidos pelo usuário
-                // com possibilidade de ataque XSS
                 $cpf = htmlspecialchars($row['cpf']);
                 $nome = htmlspecialchars($row['nome']);
                 $senha = htmlspecialchars($row['senha']);
