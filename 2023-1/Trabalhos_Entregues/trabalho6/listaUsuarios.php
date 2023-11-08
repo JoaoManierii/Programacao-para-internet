@@ -1,7 +1,8 @@
 <?php
 
 require "conexao.php";
-$pdo = mysqlConnect();
+$pdo = new PDO('mysql:host=sql112.infinityfree.com;dbname=if0_34794607_meu_banco', 'if0_34794607', 'jlvEaytnSLlWZ');
+
 
 try {
 
@@ -36,7 +37,7 @@ try {
     <table id="example" class="table table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>Usuario</th>
+                <th>CPF</th>
                 <th>Nome</th>
                 <th>Senha</th>
 
@@ -78,7 +79,7 @@ try {
             ?>
         <tfoot>
             <tr>
-                <th>Usuario</th>
+                <th>CPF</th>
                 <th>Nome</th>
                 <th>Senha</th>
             </tr>
