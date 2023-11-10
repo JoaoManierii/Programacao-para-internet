@@ -76,21 +76,7 @@ try {
         <a href="login.php" class="btn btn-primary">Login</a>
         <a href="cadastro.php" class="btn btn-primary">Cadastro</a>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('#example').DataTable({
-                "paging": true,
-                "ordering": true,
-                "searching": true
-            });
-
-            $("#limparTabela").on("click", function () {
-
-                $('#example').DataTable().clear().draw();
-
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
